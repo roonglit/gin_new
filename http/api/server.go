@@ -10,7 +10,7 @@ type Server struct {
 }
 
 // NewServer creates a new server and setup routing
-func NewServer() *Server {
+func NewServer() (*Server, error) {
 	router := gin.Default()
 
 	server := &Server{
@@ -19,7 +19,7 @@ func NewServer() *Server {
 
 	server.SetUpRoutes()
 
-	return server
+	return server, nil
 }
 
 func (s *Server) Start(address string) error {

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb;
+
+import "rpc_greet_user.proto";
+
+option go_package = "github.com/roonglit/gin_new/pb";
+
+service UserService {
+  rpc GreetUser(GreetUserRequest) returns (GreetUserResponse);
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+import "user.proto";
+
+option go_package = "github.com/roonglit/gin_new/pb";
+
+message GreetUserRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message GreetUserResponse {
+  User user = 1;
+  string message = 2;
+}

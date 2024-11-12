@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/roonglit/gin_new/pb";
+
+message User {
+  string name = 1;
+  int32 age = 2;
+}
